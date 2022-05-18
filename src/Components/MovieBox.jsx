@@ -5,11 +5,13 @@ function MovieBox({movie}) {
 
   return (
     <div className="single-movie">
+      <div className="cover-container">
         <img className="movie-cover" src={`${POSTER_PATH}${movie.poster_path}`} alt="Movie Poster" />
-        <div className="movie-info">
-          <p>{movie.title}</p>
-          <h5>{movie.vote_average}</h5>
-        </div>
+      </div>  
+      <div className="movie-info">
+        <p>{movie.title}</p>
+        <h5>{movie.vote_average}</h5>
+      </div>
     </div>
   )
 }
