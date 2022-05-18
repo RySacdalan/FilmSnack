@@ -6,7 +6,7 @@ function Header({setSearch, searchMovies}) {
         <div className="header-content">
             <h1>FilmSnack</h1>
             <form onSubmit={searchMovies}>
-                <input type="text" placeholder="e.g. Spiderman" onChange={(e) => setSearch(e.target.value)}/>
+                <input className="input-form" type="text" placeholder="e.g. Spiderman" onChange={(e) => setSearch(e.target.value)}/>
                 <button type="submit">Search</button>
             </form>
         </div>

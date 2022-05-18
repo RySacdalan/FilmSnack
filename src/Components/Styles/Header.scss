@@ -2,4 +2,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    form > .input-form, button{
+      padding: 6px;
+    }
+    .input-form{
+      font-family: inherit;
+      border: none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    button{
+      font-family: inherit;
+      background-color: #ef233c;
+      color: #fff;
+      font-weight: 400;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      &:hover{
+        background-color: #d30729;
+        cursor: pointer;
+      }
+    }
 }
