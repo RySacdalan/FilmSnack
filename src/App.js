@@ -42,7 +42,7 @@ function App() {
     <div className="App">
       <Header searchMovies={searchMovies} setSearch={setSearch} />
       <div className="hero-wrapper">
-        <HeroSection movies={movies} selectMovie={selectMovie} />
+        <HeroSection selectMovie={selectMovie} />
       </div>
       <div className="movie-wrapper">
         <RenderMovies movies={movies} />
