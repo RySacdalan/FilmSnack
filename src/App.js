@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./App.scss";
 import RenderMovies from "./Components/RenderMovies";
 import Header from "./Components/Header";
+import HeroSection from "./Components/HeroSection";
 
 function App() {
   const API_KEY = "95c0f8b244214a068a04d1af70286a1d";
@@ -10,6 +11,7 @@ function App() {
 
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
+  const [selectMovie, setSelectMovie] = useState({});
 
   //Fetch movies
   const fetchMovies = async (search) => {
@@ -23,7 +25,7 @@ function App() {
       },
     });
     setMovies(results);
-    console.log(results);
+    setSelectMovie(results[0]);
   };
 
   useEffect(() => {
@@ -39,7 +41,12 @@ function App() {
   return (
     <div className="App">
       <Header searchMovies={searchMovies} setSearch={setSearch} />
-      <RenderMovies movies={movies} />
+      <div className="hero-wrapper">
+        <HeroSection movies={movies} selectMovie={selectMovie} />
+      </div>
+      <div className="movie-wrapper">
+        <RenderMovies movies={movies} />
+      </div>
     </div>
   );
 }
