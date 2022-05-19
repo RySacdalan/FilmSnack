@@ -1,4 +1,4 @@
-import "./Styles/Header.scss"
+import '../Assets/Styles/Header.scss'
 
 function Header({setSearch, searchMovies}) {
   return (

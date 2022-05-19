@@ -1,4 +1,5 @@
-import "./Styles/MovieBox.scss"
+import "../Assets/Styles/MovieBox.scss"
+import NoPoster from "../Assets/Images/no-poster.png"
 
 function MovieBox({movie}) {
   const POSTER_PATH = 'https://image.tmdb.org/t/p/w500'
@@ -6,7 +7,7 @@ function MovieBox({movie}) {
   return (
     <div className="single-movie">
       <div className="cover-container">
-        <img className="movie-cover" src={`${POSTER_PATH}${movie.poster_path}`} alt="Movie Poster" />
+        {movie.poster_path ? <img className="movie-cover" src={`${POSTER_PATH}${movie.poster_path}`} alt="Movie Poster" /> : <img className="movie-cover" src={NoPoster} alt="Movie Poster" />}
       </div>  
       <div className="movie-info">
         <p>{movie.title}</p>

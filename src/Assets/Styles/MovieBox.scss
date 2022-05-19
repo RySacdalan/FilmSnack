@@ -19,6 +19,15 @@
       transform: scale(1.1);
     }
   }
+  .no-poster{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    font-family: inherit;
+    min-height: 357px;
+  }
   .movie-info{
     display: flex;
     align-items: center;

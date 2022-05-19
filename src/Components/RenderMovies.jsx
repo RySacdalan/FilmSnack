@@ -1,5 +1,5 @@
 import MovieBox from './MovieBox'
-import "./Styles/RenderMovies.scss"
+import "../Assets/Styles/RenderMovies.scss"
 
 function RenderMovies({movies}) {
   return (
