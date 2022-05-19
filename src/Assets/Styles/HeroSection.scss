@@ -8,17 +8,38 @@
   background-size: cover;
   background-repeat: no-repeat;
   .hero-details{ 
-   padding-bottom: 60px;
+   padding-bottom: 50px;
    .movie-title{
      font-size: 3.75rem;
      margin: 0px;
      padding: 0px;
+     text-shadow: 5px 5px 8px #000;
    }
    .trailer-btn{
+     font-family: inherit;
+     font-weight: 500;
+     background-color: #000;
+     color: #fff;
+     padding: 8px 10px;
+     border: 1px solid #fff;
+     border-radius: 5px;
      margin-bottom: 10px;
+     cursor: pointer;
+     &:hover{
+      opacity: 0.8;
+     }
    }
    .vote-trailer{
      display: flex;
+     span{
+       font-size: 0.85rem;
+       background-color: #EF233C;
+       padding: 1px 5px;
+       border-radius: 5px;
+       &:hover{
+        opacity: 0.8;
+       }
+     }
      .movie-vote{
        margin-right: 15px;
      }

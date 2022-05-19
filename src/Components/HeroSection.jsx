@@ -9,8 +9,8 @@ function HeroSection({selectMovie}) {
             <h1 className="movie-title">{selectMovie.title}</h1>
             <button className="trailer-btn">Watch Trailer</button>
             <div className="vote-trailer">
-              <span className="movie-vote">Vote Average: {selectMovie.vote_average}</span>
-              <span className="movie-popularity">Popularity: {selectMovie.popularity}</span>
+              <span className="movie-vote">Vote Average | {selectMovie.vote_average}</span>
+              <span className="movie-popularity">Popularity | {selectMovie.popularity}</span>
             </div>
             <p className="movie-overview">{selectMovie.overview}</p>
           </div>
