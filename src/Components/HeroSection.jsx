@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../Assets/Styles/HeroSection.scss"
 
 function HeroSection({selectMovie}) {
@@ -9,7 +10,9 @@ function HeroSection({selectMovie}) {
         <div className="hero-wrapper max-content">
           <div className="hero-details">  
             <h1 className="movie-title">{selectMovie.title}</h1>
-            <button className="trailer-btn">Watch Trailer</button>
+            <Link to="/trailer">
+              <button className="trailer-btn">Watch Trailer</button>
+            </Link>
             <div className="vote-trailer">
               <span className="movie-vote">Vote Average | {selectMovie.vote_average}</span>
               <span className="movie-popularity">Popularity | {selectMovie.popularity}</span>

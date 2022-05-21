@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./App.scss";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RenderMovies from "./Components/RenderMovies";
 import Header from "./Components/Header";
 import HeroSection from "./Components/HeroSection";
+import TrailerMovie from "./Components/TrailerMovie";
 
 function App() {
   const API_KEY = "95c0f8b244214a068a04d1af70286a1d";
@@ -39,15 +41,22 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Header searchMovies={searchMovies} setSearch={setSearch} />
-      <div className="hero-wrapper">
-        <HeroSection selectMovie={selectMovie} />
+    <Router>
+      <div className="App">
+        <Header searchMovies={searchMovies} setSearch={setSearch} />
+        <div className="hero-wrapper">
+          <HeroSection selectMovie={selectMovie} />
+          <Switch>
+            <Route path="/trailer">
+              <TrailerMovie />
+            </Route>
+          </Switch>
+        </div>
+        <div className="movie-wrapper">
+          <RenderMovies movies={movies} setSelectMovie={setSelectMovie} />
+        </div>
       </div>
-      <div className="movie-wrapper">
-        <RenderMovies movies={movies} setSelectMovie={setSelectMovie} />
-      </div>
-    </div>
+    </Router>
   );
 }
 
