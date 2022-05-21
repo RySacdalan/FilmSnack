@@ -11,7 +11,7 @@ function App() {
 
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
-  const [selectMovie, setSelectMovie] = useState({});
+  const [selectMovie, setSelectMovie] = useState([]);
 
   //Fetch movies
   const fetchMovies = async (search) => {
@@ -45,7 +45,7 @@ function App() {
         <HeroSection selectMovie={selectMovie} />
       </div>
       <div className="movie-wrapper">
-        <RenderMovies movies={movies} />
+        <RenderMovies movies={movies} setSelectMovie={setSelectMovie} />
       </div>
     </div>
   );
