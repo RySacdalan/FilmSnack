@@ -1,11 +1,11 @@
 import "../Assets/Styles/MovieBox.scss"
 import NoPoster from "../Assets/Images/no-poster.png"
 
-function MovieBox({ movie, setSelectMovie }) {
+function MovieBox({ movie, pickMovie }) {
   const POSTER_PATH = 'https://image.tmdb.org/t/p/w500'
 
   return (
-    <div className="single-movie" onClick={() => setSelectMovie(movie)}>
+    <div className="single-movie" onClick={() => pickMovie(movie)}>
       <div className="cover-container">
         {movie.poster_path ? <img className="movie-cover" src={`${POSTER_PATH}${movie.poster_path}`} alt="Movie Poster" /> : <img className="movie-cover" src={NoPoster} alt="Movie Poster" />}
       </div>

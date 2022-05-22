@@ -1,6 +1,7 @@
 import "../Assets/Styles/TrailerMovie.scss"
 
-function TrailerMovie() {
+function TrailerMovie({selectMovie}) {
+  const trailer = selectMovie.videos.results.find(video => video.name === "Official Trailer")
 
   return (
     <div className="modal">
@@ -8,7 +9,7 @@ function TrailerMovie() {
             <div className="top-modal">X</div>
             <div className="body-modal">
                 This is for movie trailers.
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XH5OW46yO8I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src={`https://www.youtube.com/embed/${trailer.key}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>

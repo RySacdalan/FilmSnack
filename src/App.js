@@ -30,6 +30,23 @@ function App() {
     setSelectMovie(results[0]);
   };
 
+  //Get trailer of movie
+  const fetchTrailer = async (id) => {
+    const { data } = await axios.get(`${API_URL}/movie/${id}`, {
+      params: {
+        api_key: API_KEY,
+        append_to_response: "videos",
+      },
+    });
+    return data;
+  };
+
+  const pickMovie = async (movie) => {
+    const data = await fetchTrailer(movie.id);
+    setSelectMovie(data);
+    console.log(data);
+  };
+
   useEffect(() => {
     fetchMovies();
   }, []);
@@ -48,12 +65,12 @@ function App() {
           <HeroSection selectMovie={selectMovie} />
           <Switch>
             <Route path="/trailer">
-              <TrailerMovie />
+              <TrailerMovie selectMovie={selectMovie} />
             </Route>
           </Switch>
         </div>
         <div className="movie-wrapper">
-          <RenderMovies movies={movies} setSelectMovie={setSelectMovie} />
+          <RenderMovies movies={movies} pickMovie={pickMovie} />
         </div>
       </div>
     </Router>
