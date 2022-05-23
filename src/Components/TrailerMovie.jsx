@@ -1,6 +1,12 @@
 import "../Assets/Styles/TrailerMovie.scss"
+import {useHistory} from "react-router-dom"
 
 function TrailerMovie({selectMovie}) {
+  const navigate = useHistory()
+  const backBtn = () => {
+    navigate.push("/")
+    console.log("Trailer closed");
+  }
   //For trailer
   const trailer = selectMovie.videos.results.find(video => video.name === "Official Trailer")
 
@@ -24,6 +30,7 @@ function TrailerMovie({selectMovie}) {
           </div>
           <div className="genre-container">{key}</div>
           <span className="movie-runtime">{selectMovie.runtime}mins</span>
+          <button className="back-button" onClick={backBtn}>Close Trailer</button>
         </div>
       </div>
     </div>
