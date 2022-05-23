@@ -9,6 +9,7 @@ function TrailerMovie({selectMovie}) {
   }
   //For trailer
   const trailer = selectMovie.videos.results.find(video => video.name === "Official Trailer")
+  const trailerKey = trailer ? trailer.key : selectMovie.videos.results[0].key
 
   //For genre/s of the movie
   const key = selectMovie.genres.map( genre => (
@@ -20,7 +21,7 @@ function TrailerMovie({selectMovie}) {
       <div className="modal">
         <div className="modal-wrapper">
           <div className="main-trailer">
-            <iframe width="560" height="315" src={`https://www.youtube.com/embed/${trailer.key}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src={`https://www.youtube.com/embed/${trailerKey}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div className="body-modal">
