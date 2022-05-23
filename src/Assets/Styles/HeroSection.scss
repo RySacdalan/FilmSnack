@@ -15,7 +15,12 @@
      padding: 0px;
      text-shadow: 5px 5px 8px #000;
    }
+   a{
+     text-decoration: none;
+   }
    .trailer-btn{
+     display: flex;
+     align-items: center;
      font-family: inherit;
      font-weight: 500;
      background-color: #000;
@@ -28,13 +33,17 @@
      &:hover{
       box-shadow: 1px 1px 5px 2px rgba(255,255,255,0.8);
      }
+     ion-icon{
+      font-size: 18px;
+      margin-right: 8px;
+     }
    }
    .vote-trailer{
      display: flex;
      span{
        font-size: 0.85rem;
        background-color: #EF233C;
-       padding: 1px 5px;
+       padding: 5px;
        border-radius: 5px;
        &:hover{
         opacity: 0.8;

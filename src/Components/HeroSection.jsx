@@ -10,11 +10,14 @@ function HeroSection({selectMovie}) {
           <div className="hero-details">  
             <h1 className="movie-title">{selectMovie.title}</h1>
             <Link to="/trailer">
-              <button className="trailer-btn">Watch Trailer</button>
+              <button className="trailer-btn">
+                <ion-icon name="play-circle-outline"></ion-icon>
+                Watch Trailer
+              </button>
             </Link>
             <div className="vote-trailer">
-              <span className="movie-vote">Vote Average | {selectMovie.vote_average}</span>
-              <span className="movie-popularity">Popularity | {selectMovie.popularity}</span>
+              <span className="movie-vote">{selectMovie.vote_average} vote average</span>
+              <span className="movie-popularity">{selectMovie.popularity} popularity</span>
             </div>
             <p className="movie-overview">{selectMovie.overview}</p>
           </div>
