@@ -27,7 +27,7 @@ function App() {
       },
     });
     setMovies(results);
-    setSelectMovie(results[0]);
+    pickMovie(results[0]);
   };
 
   //Get trailer of movie
