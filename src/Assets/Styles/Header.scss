@@ -1,7 +1,9 @@
-.header-content{
+.header{
+  .header-content{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0px 8px;
     form > .input-form, button{
       padding: 6px;
     }
@@ -23,4 +25,21 @@
         cursor: pointer;
       }
     }
+  }
+}
+
+//Media queries
+@media screen and (max-width: 450px){
+ .header{
+  .header-content{
+   flex-direction: column;
+   margin-bottom: 10px;
+   h1{
+    margin-bottom: 0px;
+   }
+   .input-form{
+    width: 210px;
+   }
+  }
+ }
 }
