@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FilmSnack/static/css/main.ec50f8b0.css",
+    "main.js": "/FilmSnack/static/js/main.b866a18d.js",
+    "index.html": "/FilmSnack/index.html",
+    "main.ec50f8b0.css.map": "/FilmSnack/static/css/main.ec50f8b0.css.map",
+    "main.b866a18d.js.map": "/FilmSnack/static/js/main.b866a18d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec50f8b0.css",
+    "static/js/main.b866a18d.js"
+  ]
+}
