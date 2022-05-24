@@ -5,3 +5,22 @@
     background-color: #0f1014;
     padding: 15px;
 }
+
+//Media queries
+@media (min-width: 481px) and (max-width: 768px) {
+ .movies-container {
+  grid-template-columns: repeat(3, 1fr);
+ }
+}
+
+@media (min-width: 420px) and (max-width: 480px) {
+ .movies-container {
+  grid-template-columns: 1fr 1fr;
+ }
+}
+
+@media screen and (max-width: 419px) {
+ .movies-container {
+  grid-template-columns: 1fr;
+ }
+}
