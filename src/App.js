@@ -57,6 +57,11 @@ function App() {
     fetchMovies(search);
   };
 
+  //scroll to top
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Router>
       <div className="App">
@@ -70,7 +75,11 @@ function App() {
           </Switch>
         </div>
         <div className="movie-wrapper">
-          <RenderMovies movies={movies} pickMovie={pickMovie} />
+          <RenderMovies
+            movies={movies}
+            pickMovie={pickMovie}
+            scroll={scrollToTop}
+          />
         </div>
       </div>
     </Router>
