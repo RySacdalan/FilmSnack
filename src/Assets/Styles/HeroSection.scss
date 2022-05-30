@@ -56,3 +56,42 @@
    }
   }
 }
+
+@media (min-width: 481px) and (max-width: 768px){
+ .hero{
+   .hero-details{
+     .movie-title{
+       font-size: 2.5rem;
+     }
+     .movie-overview{
+       font-size: 15px;
+     }
+   }
+ }
+}
+
+@media (min-width: 420px) and (max-width: 480px){
+  .hero{
+    .hero-details{
+      .movie-title{
+        font-size: 2.2rem;
+      }
+      .movie-overview{
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 419px){
+  .hero{
+    .hero-details{
+      .movie-title{
+        font-size: 2rem;
+      }
+      .movie-overview{
+        font-size: 10px;
+      }
+    }
+  }
+}
