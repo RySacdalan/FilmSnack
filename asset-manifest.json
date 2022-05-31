@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/FilmSnack/static/css/main.b2181aac.css",
-    "main.js": "/FilmSnack/static/js/main.f980a550.js",
+    "main.css": "/FilmSnack/static/css/main.c6bdcecb.css",
+    "main.js": "/FilmSnack/static/js/main.d0341d07.js",
     "static/media/not-found.png": "/FilmSnack/static/media/not-found.8be4f0edd5dba6c3446e.png",
     "index.html": "/FilmSnack/index.html",
-    "main.b2181aac.css.map": "/FilmSnack/static/css/main.b2181aac.css.map",
-    "main.f980a550.js.map": "/FilmSnack/static/js/main.f980a550.js.map"
+    "main.c6bdcecb.css.map": "/FilmSnack/static/css/main.c6bdcecb.css.map",
+    "main.d0341d07.js.map": "/FilmSnack/static/js/main.d0341d07.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2181aac.css",
-    "static/js/main.f980a550.js"
+    "static/css/main.c6bdcecb.css",
+    "static/js/main.d0341d07.js"
   ]
 }
