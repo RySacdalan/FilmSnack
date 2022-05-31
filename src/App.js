@@ -6,6 +6,7 @@ import RenderMovies from "./Components/RenderMovies";
 import Header from "./Components/Header";
 import HeroSection from "./Components/HeroSection";
 import TrailerMovie from "./Components/TrailerMovie";
+import NotFound from "./Assets/Images/not-found.png";
 
 function App() {
   const API_KEY = "95c0f8b244214a068a04d1af70286a1d";
@@ -66,21 +67,33 @@ function App() {
     <Router>
       <div className="App">
         <Header searchMovies={searchMovies} setSearch={setSearch} />
-        <div className="hero-wrapper">
-          <HeroSection selectMovie={selectMovie} />
-          <Switch>
-            <Route path="/trailer">
-              <TrailerMovie selectMovie={selectMovie} />
-            </Route>
-          </Switch>
-        </div>
-        <div className="movie-wrapper">
-          <RenderMovies
-            movies={movies}
-            pickMovie={pickMovie}
-            scroll={scrollToTop}
-          />
-        </div>
+        {movies.length ? (
+          <>
+            <div className="hero-wrapper">
+              <HeroSection selectMovie={selectMovie} />
+              <Switch>
+                <Route path="/trailer">
+                  <TrailerMovie selectMovie={selectMovie} />
+                </Route>
+              </Switch>
+            </div>
+            <div className="movie-wrapper">
+              <RenderMovies
+                movies={movies}
+                pickMovie={pickMovie}
+                scroll={scrollToTop}
+              />
+            </div>
+          </>
+        ) : (
+          <div className="found-error max-content">
+            <img src={NotFound} alt="No movies" />
+            <h2>
+              Sorry, no movies found <ion-icon name="sad"></ion-icon>
+            </h2>
+            <p>Please try another one!</p>
+          </div>
+        )}
       </div>
     </Router>
   );
