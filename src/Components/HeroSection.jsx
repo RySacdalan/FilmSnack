@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import "../Assets/Styles/HeroSection.scss"
 
-function HeroSection({selectMovie}) {
+function HeroSection({selectMovie, movies}) {
   const BACKDROP_PATH = 'https://image.tmdb.org/t/p/original'
+  console.log(selectMovie);
 
   return (
     <div className="hero" style={{backgroundImage: `url(${BACKDROP_PATH}${selectMovie.backdrop_path ? selectMovie.backdrop_path : null} )`}}>
         <div className="hero-wrapper max-content">
           <div className="hero-details">  
             <h1 className="movie-title">{selectMovie.title}</h1>
-            <Link to={`/trailer/${selectMovie.imdb_id}`}>
+            <Link to={`${selectMovie.id}/${selectMovie.imdb_id}`}>
               <button className="trailer-btn">
                 <ion-icon name="play-circle-outline"></ion-icon>
                 Watch Trailer

@@ -70,9 +70,9 @@ function App() {
         {movies.length ? (
           <Fragment>
             <div className="hero-wrapper">
-              <HeroSection selectMovie={selectMovie} />
+              <HeroSection selectMovie={selectMovie} movies={movies} />
               <Switch>
-                <Route path="/trailer/:id">
+                <Route path={`/${selectMovie.id}/:id`}>
                   <TrailerMovie selectMovie={selectMovie} />
                 </Route>
               </Switch>
