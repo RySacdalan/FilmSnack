@@ -4,6 +4,9 @@
   &:hover{
     background-color: #1a3d59;
   }
+  a{
+   text-decoration: none;
+  }
   .cover-container{
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -33,6 +36,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 8px;
+    p{
+     color: #fff;
+    }
     h5{
      text-align: center;
      color: #f7f759;
