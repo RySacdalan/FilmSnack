@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect, Fragment } from "react";
 import "./App.scss";
+import ClipLoader from "react-spinners/ClipLoader";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RenderMovies from "./Components/RenderMovies";
 import Header from "./Components/Header";
@@ -41,6 +42,7 @@ function App() {
         append_to_response: "videos",
       },
     });
+    setLoading(false);
     return data;
   };
 
@@ -89,11 +91,19 @@ function App() {
           </Fragment>
         ) : (
           <div className="found-error max-content">
-            <img src={NotFound} alt="No movies" />
-            <h2>
-              Sorry, no movies found <ion-icon name="sad"></ion-icon>
-            </h2>
-            <p>Please try another one!</p>
+            {loading ? (
+              <div className="filmsnack-loading">
+                <ClipLoader size={200} color={"#fff"} loading={loading} />
+              </div>
+            ) : (
+              <Fragment>
+                <img src={NotFound} alt="No movies" />
+                <h2>
+                  Sorry, no movies found <ion-icon name="sad"></ion-icon>
+                </h2>
+                <p>Please try another one!</p>
+              </Fragment>
+            )}
           </div>
         )}
       </div>
