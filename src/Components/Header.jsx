@@ -1,6 +1,8 @@
 import '../Assets/Styles/Header.scss'
 
 function Header({setSearch, searchMovies}) {
+  console.log("*** E N J O Y W A T C H I N G :'> ***");
+  
   return (
     <div className="header max-content">
         <div className="header-content">

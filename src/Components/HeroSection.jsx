@@ -3,7 +3,6 @@ import "../Assets/Styles/HeroSection.scss"
 
 function HeroSection({selectMovie, movies}) {
   const BACKDROP_PATH = 'https://image.tmdb.org/t/p/original'
-  console.log(selectMovie);
 
   return (
     <div className="hero" style={{backgroundImage: `url(${BACKDROP_PATH}${selectMovie.backdrop_path ? selectMovie.backdrop_path : null} )`}}>

@@ -49,7 +49,6 @@ function App() {
   const pickMovie = async (movie) => {
     const data = await fetchTrailer(movie.id);
     setSelectMovie(data);
-    console.log(data);
   };
 
   useEffect(() => {
