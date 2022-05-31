@@ -3,6 +3,8 @@ import {useHistory} from "react-router-dom"
 
 function TrailerMovie({selectMovie}) {
   const navigate = useHistory()
+
+  //Back or close button
   const backBtn = () => {
     navigate.push("/")
     console.log("Trailer closed");

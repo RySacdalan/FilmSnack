@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import RenderMovies from "./Components/RenderMovies";
@@ -68,11 +68,11 @@ function App() {
       <div className="App">
         <Header searchMovies={searchMovies} setSearch={setSearch} />
         {movies.length ? (
-          <>
+          <Fragment>
             <div className="hero-wrapper">
               <HeroSection selectMovie={selectMovie} />
               <Switch>
-                <Route path="/trailer">
+                <Route path="/trailer/:id">
                   <TrailerMovie selectMovie={selectMovie} />
                 </Route>
               </Switch>
@@ -84,7 +84,7 @@ function App() {
                 scroll={scrollToTop}
               />
             </div>
-          </>
+          </Fragment>
         ) : (
           <div className="found-error max-content">
             <img src={NotFound} alt="No movies" />

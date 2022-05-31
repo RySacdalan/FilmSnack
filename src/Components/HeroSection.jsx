@@ -9,7 +9,7 @@ function HeroSection({selectMovie}) {
         <div className="hero-wrapper max-content">
           <div className="hero-details">  
             <h1 className="movie-title">{selectMovie.title}</h1>
-            <Link to="/trailer">
+            <Link to={`/trailer/${selectMovie.imdb_id}`}>
               <button className="trailer-btn">
                 <ion-icon name="play-circle-outline"></ion-icon>
                 Watch Trailer
