@@ -15,6 +15,7 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
   const [selectMovie, setSelectMovie] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   //Fetch movies
   const fetchMovies = async (search) => {
@@ -27,6 +28,7 @@ function App() {
         query: search,
       },
     });
+    setLoading(false);
     setMovies(results);
     pickMovie(results[0]);
   };
